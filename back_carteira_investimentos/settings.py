@@ -80,11 +80,11 @@ WSGI_APPLICATION = 'back_carteira_investimentos.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': os.getenv('DATABASE_ENGINE', default='django.db.backends.postgresql'),
-        'NAME': os.getenv('NAME', default='database'),
+        'NAME': os.getenv('DATABASE_NAME', default='database'),
         'USER': os.getenv('USER', default='postgres'),
         'PASSWORD': os.getenv('PASSWORD', default='password'),
         'HOST': os.getenv('HOST', default='localhost'),
-        'PORT': os.getenv('PORT', '5432')
+        'PORT': os.getenv('PORT', default='5432')
     }
 }
 
