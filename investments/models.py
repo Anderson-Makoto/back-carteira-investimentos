@@ -1,5 +1,6 @@
 from django.db import models
 from users.models import Users;
+import datetime;
 
 # Create your models here.
 class Asset_Types(models.Model):
@@ -13,5 +14,7 @@ class User_Investments(models.Model):
     user_id = models.ForeignKey(Users, on_delete=models.CASCADE);
     capital = models.DecimalField(max_digits=8, decimal_places=2);
     assets_id = models.ForeignKey(Assets, on_delete=models.CASCADE);
-    date = models.DateField();
+    date_time = models.CharField(max_length=18, default=datetime.datetime.now().timestamp());
+    is_buying = models.BooleanField();
+    amount = models.IntegerField();
     

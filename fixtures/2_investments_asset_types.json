@@ -1,0 +1,1 @@
+[{"model": "investments.asset_types", "pk": 1, "fields": {"asset_type": "variavel"}}, {"model": "investments.asset_types", "pk": 2, "fields": {"asset_type": "fixo"}}]

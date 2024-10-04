@@ -5,3 +5,8 @@ INVESTMENT_PROFILES = {
     2: 'arrojado',
     3: 'conservador',
 };
+
+ASSET_TYPES = {
+    1: 'variavel',
+    2: 'fixo',
+};
