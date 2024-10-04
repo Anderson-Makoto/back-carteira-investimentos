@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -80,11 +81,11 @@ WSGI_APPLICATION = 'back_carteira_investimentos.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': os.getenv('DATABASE_ENGINE', default='django.db.backends.postgresql'),
-        'NAME': os.getenv('NAME', default='database'),
-        'USER': os.getenv('USER', default='postgres'),
-        'PASSWORD': os.getenv('PASSWORD', default='password'),
-        'HOST': os.getenv('HOST', default='localhost'),
-        'PORT': os.getenv('PORT', '5432')
+        'NAME': os.getenv('DATABASE_NAME', default='database'),
+        'USER': os.getenv('DATABASE_USER', default='postgres'),
+        'PASSWORD': os.getenv('DATABASE_PASSWORD', default='password'),
+        'HOST': os.getenv('DATABASE_HOST', default='localhost'),
+        'PORT': os.getenv('DATABASE_PORT', default='5432')
     }
 }
 

@@ -1,0 +1,23 @@
+[
+{
+  "model": "users.investment_profiles",
+  "pk": 1,
+  "fields": {
+    "profile": "moderado"
+  }
+},
+{
+  "model": "users.investment_profiles",
+  "pk": 2,
+  "fields": {
+    "profile": "arrojado"
+  }
+},
+{
+  "model": "users.investment_profiles",
+  "pk": 3,
+  "fields": {
+    "profile": "conservador"
+  }
+}
+]
