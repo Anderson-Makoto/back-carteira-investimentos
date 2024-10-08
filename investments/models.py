@@ -7,13 +7,13 @@ class Asset_Types(models.Model):
     asset_type = models.CharField(max_length=10);
 
 class Assets(models.Model):
-    asset_type = models.ForeignKey(Asset_Types, primary_key=True, on_delete=models.CASCADE);
+    asset_type = models.ForeignKey(Asset_Types, on_delete=models.CASCADE);
     asset_name = models.CharField(max_length=20);
 
 class User_Investments(models.Model):
-    user_id = models.ForeignKey(Users, primary_key=True, on_delete=models.CASCADE);
+    user_id = models.ForeignKey(Users, on_delete=models.CASCADE);
     capital = models.DecimalField(max_digits=8, decimal_places=2);
-    assets_id = models.ForeignKey(Assets, primary_key=True, on_delete=models.CASCADE);
+    assets_id = models.ForeignKey(Assets, on_delete=models.CASCADE);
     date_time = models.CharField(max_length=18, default=datetime.datetime.now().timestamp());
     is_buying = models.BooleanField();
     amount = models.IntegerField();

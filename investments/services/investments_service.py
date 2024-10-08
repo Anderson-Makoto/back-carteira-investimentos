@@ -7,4 +7,5 @@ class InvestmentsService():
 
     def create_investment(self, data: dict) -> bool:
         
-        return True;
+        logger = logging.getLogger('django');
+        logger.info(data);

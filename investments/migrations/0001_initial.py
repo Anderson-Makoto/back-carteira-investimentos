@@ -16,14 +16,14 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Asset_Types',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.BigAutoField(auto_created=True, serialize=False, verbose_name='ID')),
                 ('asset_type', models.CharField(max_length=10)),
             ],
         ),
         migrations.CreateModel(
             name='Assets',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.BigAutoField(auto_created=True, serialize=False, verbose_name='ID')),
                 ('asset_name', models.CharField(max_length=20)),
                 ('asset_type', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='investments.asset_types')),
             ],
@@ -31,7 +31,7 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='User_Investments',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.BigAutoField(auto_created=True, serialize=False, verbose_name='ID')),
                 ('capital', models.DecimalField(decimal_places=2, max_digits=8)),
                 ('date_time', models.CharField(default=1728056299.117742, max_length=18)),
                 ('is_buying', models.BooleanField()),
