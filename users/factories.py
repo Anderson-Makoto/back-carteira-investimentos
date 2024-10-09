@@ -21,6 +21,4 @@ class UsersFactory(factory.django.DjangoModelFactory):
     last_name = faker.Faker().last_name();
     email = faker.Faker().email();
     password = sha1('abc123'.encode('utf-8')).hexdigest();
-    investment_profile_id = Investment_Profiles.objects.get(
-        pk=random.choice(list(INVESTMENT_PROFILES.keys()))
-        );
+    investment_profile_id = random.choice(list(INVESTMENT_PROFILES.keys()));

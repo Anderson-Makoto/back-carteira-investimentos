@@ -9,4 +9,4 @@ class Users(models.Model):
     last_name = models.CharField(max_length=20);
     email = models.EmailField();
     password = models.CharField(max_length=40);
-    investment_profile_id = models.ForeignKey(Investment_Profiles, on_delete=models.CASCADE);
+    investment_profile = models.ForeignKey(Investment_Profiles, on_delete=models.CASCADE);

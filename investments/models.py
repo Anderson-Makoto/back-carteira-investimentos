@@ -11,10 +11,10 @@ class Assets(models.Model):
     asset_name = models.CharField(max_length=20);
 
 class User_Investments(models.Model):
-    user_id = models.ForeignKey(Users, on_delete=models.CASCADE);
+    user = models.ForeignKey(Users, on_delete=models.CASCADE);
     capital = models.DecimalField(max_digits=8, decimal_places=2);
-    assets_id = models.ForeignKey(Assets, on_delete=models.CASCADE);
-    date_time = models.CharField(max_length=18, default=datetime.datetime.now().timestamp());
+    assets = models.ForeignKey(Assets, on_delete=models.CASCADE);
+    date_time = models.IntegerField(default=datetime.datetime.now().timestamp());
     is_buying = models.BooleanField();
     amount = models.IntegerField();
     
