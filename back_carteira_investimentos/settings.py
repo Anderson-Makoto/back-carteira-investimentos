@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'investments',
     'rest_framework',
     'factory',
+    'core',
 ]
 
 MIDDLEWARE = [
