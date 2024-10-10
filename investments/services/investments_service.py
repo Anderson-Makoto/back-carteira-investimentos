@@ -1,14 +1,12 @@
 from ..models import User_Investments, Assets;
 from users.models import Users;
-from rest_framework import status;
 from helpers import BadRequestException, ServerErrorException;
-import logging;
 
 class InvestmentsService():
     def __init__(self):
         None;
 
-    def create_investment(self, data: dict) -> Users:
+    def create_investment(self, data: dict) -> User_Investments:
         user_exists = Users.objects.filter(id=data['user_id']).exists();
         asset_exists = Assets.objects.filter(id=data['assets_id']).exists();
 
