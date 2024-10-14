@@ -14,7 +14,7 @@ class User_Investments(models.Model):
     user = models.ForeignKey(Users, on_delete=models.CASCADE);
     capital = models.DecimalField(max_digits=8, decimal_places=2);
     assets = models.ForeignKey(Assets, on_delete=models.CASCADE);
-    date_time = models.DecimalField(max_digits=20, decimal_places=10, default=datetime.datetime.now().timestamp());
+    created_at = models.DateTimeField(auto_now_add=True);
     is_buying = models.BooleanField();
     amount = models.IntegerField();
     

@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'factory',
     'core',
+    'rest_framework.authtoken',
 ]
 
 MIDDLEWARE = [
@@ -137,3 +138,6 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+AUTH_USER_MODEL = 'users.Users'
+ACCOUNT_USER_MODEL_USERNAME_FIELD = None
